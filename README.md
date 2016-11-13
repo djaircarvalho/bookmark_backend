@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API
 
-Things you may want to cover:
+headers
 
-* Ruby version
+{
+  Content-Type: application/json
+  Accept: application/json
+}
+requests:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+creating a user
+{
+  method:POST
+  uri:signup
+  body:{ "user": { "name": "acme" , "email":"acme@example.com", "password":"1234567",  "password_confirmation":"1234567" } }
+}
+getting a jwt token
+{
+  method:POST
+  uri:authenticate
+  body:{"email":"djair@example.com", "password":"1234567"}
+}
