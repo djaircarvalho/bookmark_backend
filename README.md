@@ -1,22 +1,23 @@
 # README
 
-API
+## API
 
-headers
+###headers
 
 {
   Content-Type: application/json
   Accept: application/json
 }
-requests:
 
-creating a user
+###requests:
+
+####creating a user
 {
   method:POST
   uri:signup
   body:{ "user": { "name": "acme" , "email":"acme@example.com", "password":"1234567",  "password_confirmation":"1234567" } }
 }
-getting a jwt token
+####getting a jwt token
 {
   method:POST
   uri:authenticate
