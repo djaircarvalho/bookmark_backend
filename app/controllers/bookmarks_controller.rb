@@ -20,7 +20,7 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       render :show, status: :created, location: @bookmark
     else
-      render json: @bookmark.errors, status: :unprocessable_entity
+      render json: @bookmark.errors.full_messages, status: :unprocessable_entity
     end
   end
 
