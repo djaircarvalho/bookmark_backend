@@ -2,24 +2,30 @@
 
 ## API
 
-###headers
+### headers
 
+```sh
 {
   Content-Type: application/json
   Accept: application/json
 }
+```
 
-###Requests:
+### Requests:
 
-####Creating an user
+#### Creating an user
+```sh
 {
   method:POST
   uri:signup
   body:{ "user": { "name": "acme" , "email":"acme@example.com", "password":"1234567",  "password_confirmation":"1234567" } }
 }
-####Getting a jwt token
+```
+#### Getting a jwt token
+```sh
 {
   method:POST
   uri:authenticate
-  body:{"email":"djair@example.com", "password":"1234567"}
+  body:{"email":"acme@example.com", "password":"1234567"}
 }
+```
